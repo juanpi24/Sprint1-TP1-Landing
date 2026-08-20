@@ -42,7 +42,7 @@ export default function Hero({ title, subtitle }) {
               onClick={handleEnrollClick}
               className="flex items-center gap-2 rounded-lg bg-primary px-8 py-3 font-bold text-on-primary shadow-lg shadow-primary/30 transition-transform duration-200 hover:scale-105"
             >
-              Inscribite ahora
+              Quiero más información
               <span aria-hidden="true">→</span>
             </button>
           </div>
