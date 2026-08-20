@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RoboKids Academy | Online Robotics for Kids</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&amp;family=Plus+Jakarta+Sans:wght@400;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#f9f9fc",
+                        "surface-variant": "#e2e2e5",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f3f6",
+                        "primary-fixed": "#d9e2ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-primary-fixed": "#001945",
+                        "tertiary": "#5a5c5d",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#191c1d",
+                        "outline-variant": "#c2c6d8",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#b0c6ff",
+                        "tertiary-fixed": "#e1e3e4",
+                        "surface-container-high": "#e8e8ea",
+                        "on-tertiary-container": "#fcfdfe",
+                        "secondary": "#406900",
+                        "tertiary-container": "#737576",
+                        "on-primary-fixed-variant": "#00429c",
+                        "on-surface": "#1a1c1e",
+                        "on-primary-container": "#fefcff",
+                        "inverse-surface": "#2f3133",
+                        "secondary-fixed": "#9ffb00",
+                        "on-secondary-container": "#436e00",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#2f4f00",
+                        "secondary-fixed-dim": "#8bdc00",
+                        "surface-tint": "#0058cb",
+                        "on-surface-variant": "#424655",
+                        "on-background": "#1a1c1e",
+                        "inverse-on-surface": "#f0f0f3",
+                        "surface": "#f9f9fc",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#b0c6ff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#102000",
+                        "primary-container": "#006df8",
+                        "primary": "#0056c6",
+                        "surface-bright": "#f9f9fc",
+                        "outline": "#727787",
+                        "surface-container-highest": "#e2e2e5",
+                        "surface-dim": "#dadadc",
+                        "secondary-container": "#9df800",
+                        "surface-container": "#eeeef0"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-caps": ["JetBrains Mono", "monospace"],
+                        "display-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "display-lg": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden min-h-screen">
+<!-- Top Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-surface-variant shadow-sm transition-all duration-300" id="navbar">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+<!-- Brand -->
+<a class="flex items-center gap-2 group hover:scale-105 transition-transform duration-200" href="#">
+<img alt="RoboKids Logo" class="h-10 w-10 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcXOHmQ9_yombSumQcij-JhDFg1xfa4XqUs9vEE3DHL6vo3OubDhqS5dVHHnIHoBQA0kqjFrt2PdOyAcMWKMQTs6wN81jTJMbchgg6R9_WNVH4FISfl-Ad10LLjmpkADw-cCrIt3lwgM3JYBSb8fkD9NKRoPKhGJyxXx45CyY3sDU-AgcFYti_o736vLA5dAQuD6brGHt6zlINNf6xgErb3H8YcAGuuV5xlMJ4i_oNDne56oUeioY3UQ">
+<span class="text-headline-md font-headline-md text-primary">RoboKids</span>
+</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md hover:scale-105 transition-transform duration-200" href="#curriculum">Currículum</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md hover:scale-105 transition-transform duration-200" href="#how-it-works">Cómo funciona</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md hover:scale-105 transition-transform duration-200" href="#teachers">Profesores</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md hover:scale-105 transition-transform duration-200" href="#pricing">Precios</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<a class="hidden md:inline-flex text-primary font-body-md hover:scale-105 transition-transform duration-200" href="#login">Login</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body-md hover:scale-105 transition-transform duration-200 shadow-md shadow-primary/20" href="#enroll">Inscribite ahora</a>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 pb-16">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-32 relative overflow-hidden">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div class="z-10 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 bg-primary-fixed/20 text-primary-fixed-dim px-3 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span class="font-label-caps text-label-caps uppercase text-primary">Plataforma 100% Online</span>
+</div>
+<h1 class="text-display-lg-mobile font-display-lg-mobile md:text-display-lg md:font-display-lg text-on-background">
+                        Ingeniería para la <br><span class="text-primary">próxima generación</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-lg">
+                        Aprendé robótica y programación desde casa. Conectamos la curiosidad natural con las herramientas tecnológicas del futuro, en un entorno seguro y divertido.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-body-md hover:scale-105 transition-transform duration-200 shadow-lg shadow-primary/30 flex items-center gap-2" href="#enroll">
+                            Inscribite ahora
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative h-[400px] md:h-[600px] rounded-xl overflow-hidden glass-panel border border-surface-variant p-4">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A futuristic, high-tech minimalist illustration of a diverse, tech-savvy teenager building a friendly, sleek robot in a bright, modern light-mode laboratory setting. The room features subtle glowing holographic blue interfaces and clean white surfaces. Electric blue accents highlight the robotic parts. The mood is inspiring, educational, and technologically advanced, with extensive whitespace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfVhkmgJTMzds__MTbg5rvF6ECWBjkVf7o3oZAizLrj77kZSI8II0b9cHJXnkcLe4VsMPiCm0spITEQ7jjFS1cY0o8wyfB3SZugCzjL9oSeiSzwAC2DNWXMMEYT_dFwn7t6_Mhy_K88ZjYAmgN_Fu-8UWhos08o3vWbWwp98rweQ4sGEEHG35IbHUh_tnBDf0qLcHB7eOJrKKYwATHCr6GKYgL_AEKUjS9ozkKTy9xkLA00DCyMeMgBw">
+</div>
+</div>
+</section>
+<!-- Benefits Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16" id="how-it-works">
+<div class="text-center mb-12">
+<h2 class="text-headline-md font-headline-md text-on-background mb-4">¿Por qué elegir RoboKids?</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl mx-auto">Nuestro enfoque combina el rigor académico de la ingeniería con la creatividad del juego.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+<!-- Benefit 1: Large -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-xl p-8 border border-surface-variant flex flex-col justify-end relative overflow-hidden group hover:border-primary transition-colors">
+<div class="absolute top-6 right-6 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">build</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-background mb-2">Aprendizaje práctico</h3>
+<p class="text-body-md text-on-surface-variant">Proyectos reales con simuladores virtuales avanzados y kits enviados a casa.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-6 border border-surface-variant relative hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 block">science</span>
+<h3 class="font-bold text-lg mb-1">Habilidades STEM</h3>
+<p class="text-sm text-on-surface-variant">Ciencia, tecnología, ingeniería y matemáticas aplicadas.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-surface-variant relative hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 block">trending_up</span>
+<h3 class="font-bold text-lg mb-1">Futuro</h3>
+<p class="text-sm text-on-surface-variant">Preparación para los trabajos del mañana.</p>
+</div>
+<!-- Benefit 4 -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-surface-variant relative hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 block">security</span>
+<h3 class="font-bold text-lg mb-1">Ambiente seguro</h3>
+<p class="text-sm text-on-surface-variant">Aulas virtuales monitoreadas y moderadas.</p>
+</div>
+</div>
+</section>
+<!-- Courses Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24" id="curriculum">
+<div class="mb-12 flex flex-col md:flex-row justify-between items-end gap-4">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest block mb-2">Rutas de Aprendizaje</span>
+<h2 class="text-headline-md font-headline-md text-on-background">Diseñado para cada edad</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Course 1 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
+<div class="bg-surface-container-low h-40 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-primary opacity-50 group-hover:scale-110 transition-transform">smart_toy</span>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-full font-label-caps">8-11 AÑOS</span>
+</div>
+<h3 class="text-xl font-bold mb-2 text-on-background">Exploradores</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Iniciación a la lógica matemática y fundamentos del pensamiento computacional mediante juegos estructurados.</p>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all" href="#enroll">Ver plan de estudios <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<!-- Course 2 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group relative">
+<div class="absolute top-0 right-6 transform -translate-y-1/2 bg-secondary text-on-secondary text-xs font-bold px-3 py-1 rounded-full shadow-md">POPULAR</div>
+<div class="bg-surface-container-low h-40 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-primary opacity-50 group-hover:scale-110 transition-transform">memory</span>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-full font-label-caps">12-14 AÑOS</span>
+</div>
+<h3 class="text-xl font-bold mb-2 text-on-background">Creadores</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Robótica práctica y electrónica básica. Integración de sensores, actuadores y código estructurado.</p>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all" href="#enroll">Ver plan de estudios <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+<!-- Course 3 -->
+<div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 group">
+<div class="bg-surface-container-low h-40 rounded-lg mb-6 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-6xl text-primary opacity-50 group-hover:scale-110 transition-transform">code_blocks</span>
+</div>
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-primary/10 text-primary text-xs font-bold px-2 py-1 rounded-full font-label-caps">15-16 AÑOS</span>
+</div>
+<h3 class="text-xl font-bold mb-2 text-on-background">Innovadores</h3>
+<p class="text-on-surface-variant mb-6 text-sm">Programación avanzada en Python/C++, arquitectura de sistemas complejos y algoritmos aplicados.</p>
+<a class="text-primary font-bold flex items-center gap-1 text-sm group-hover:gap-2 transition-all" href="#enroll">Ver plan de estudios <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section id="contact" class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+  <div class="bg-surface-container-low rounded-xl p-8 md:p-12 border border-surface-variant">
+    <div class="max-w-2xl mx-auto text-center mb-12">
+      <h2 class="text-headline-md font-headline-md text-on-background mb-4">Contacto</h2>
+      <p class="text-body-md font-body-md text-on-surface-variant">¿Tenés dudas? Escribinos y te asesoramos.</p>
+    </div>
+    <form class="max-w-lg mx-auto grid grid-cols-1 gap-6">
+      <div>
+        <label class="block text-sm font-bold text-on-background mb-2" for="name">Nombre</label>
+        <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-surface-variant bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Tu nombre">
+      </div>
+      <div>
+        <label class="block text-sm font-bold text-on-background mb-2" for="email">Email</label>
+        <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-surface-variant bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="tu@email.com">
+      </div>
+      <div>
+        <label class="block text-sm font-bold text-on-background mb-2" for="age">Edad del estudiante</label>
+        <input type="number" id="age" class="w-full px-4 py-3 rounded-lg border border-surface-variant bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Ej: 10">
+      </div>
+      <button type="submit" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-body-md font-bold hover:scale-105 transition-transform duration-200 shadow-lg shadow-primary/30 mt-4">
+        Quiero más información
+      </button>
+    </form>
+  </div>
+</section><footer class="w-full py-16 bg-inverse-surface text-primary-fixed">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<div class="text-headline-md font-headline-md text-primary-fixed mb-4">RoboKids</div>
+<p class="text-body-md font-body-md text-surface-variant opacity-80 max-w-sm mb-6">
+                    © 2024 RoboKids Academy. Engineering the future.
+                </p>
+</div>
+<div class="flex flex-col md:items-end gap-4">
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors text-body-md" href="#">Privacy Policy</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors text-body-md" href="#">Terms of Service</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors text-body-md" href="#">Parent Portal</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-secondary-fixed transition-colors text-body-md" href="#">Careers</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll listener to add shadow/opacity to nav
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-surface/80', 'bg-surface/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-surface/95', 'bg-surface/80');
+            }
+        });
+    </script>
+
+
+</body></html>
