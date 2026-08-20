@@ -29,7 +29,7 @@ El proyecto se encuentra organizado modularmente dentro de `src/components/`:
     npm run dev
 
 ## 🚀 Deploy online (Netlify)
-* [Ir al Porfolio ](https://miporfolioreact.netlify.app/) 
+* [Ir al Porfolio ](https://sprint1-tp1-landing.netlify.app/) 
 
 ## Uso de IA
 * Herramientas utilizadas: Google Stitch para la generación visual del prototipo UI y Copilot para asistencia en redacción de prompts y Claude codigo.
