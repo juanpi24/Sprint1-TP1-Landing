@@ -3,13 +3,16 @@ import { NAV_LINKS } from "../data/navLinks";
 
 export default function Navbar() {
   return (
+    //Top Navigation
     <header className="fixed top-0 z-50 w-full border-b border-surface-variant bg-surface/80 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-dark-surface/80">
       <div className="mx-auto flex h-20 max-w-(--spacing-container-max) items-center justify-between px-margin-mobile md:px-margin-desktop">
-        {/* Marca */}
+      {/*Brand*/}
         <a href="#" className="flex items-center gap-2">
-          <span className="grid h-10 w-10 place-items-center rounded-md bg-primary text-lg text-on-primary">
+
+          <img alt="RoboKids Logo" className="h-10 w-10 object-contain rounded-md" src="logo.jpg"></img>
+        { /* <span className="grid h-10 w-10 place-items-center rounded-md bg-primary text-lg text-on-primary">
             🤖
-          </span>
+          </span>*/}
           <span className="text-2xl font-extrabold text-primary">RoboKids</span>
         </a>
 

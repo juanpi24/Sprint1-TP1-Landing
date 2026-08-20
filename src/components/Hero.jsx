@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 // Handler nombrado: hace scroll suave hacia el formulario de contacto.
 function handleEnrollClick(event) {
   event.preventDefault();
-  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function Hero() {
