@@ -17,7 +17,7 @@ export default function Benefits() {
         </p>
       </div>
 
-      <div className="grid auto-rows-[200px] grid-cols-1 gap-4 md:grid-cols-4">
+      <div className="grid auto-rows-50 grid-cols-1 gap-4 md:grid-cols-4">
         {benefits.map((benefit) => (
           <article
             key={benefit.id}
