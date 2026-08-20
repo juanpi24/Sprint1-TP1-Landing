@@ -1,11 +1,5 @@
 // src/components/Navbar.jsx
-
-const NAV_LINKS = [
-  { id: "curriculum", label: "Currículum", href: "#curriculum" },
-  { id: "how-it-works", label: "Cómo funciona", href: "#how-it-works" },
-  { id: "teachers", label: "Profesores", href: "#teachers" },
-  { id: "pricing", label: "Precios", href: "#pricing" },
-];
+import { NAV_LINKS } from "../data/navLinks";
 
 export default function Navbar() {
   return (

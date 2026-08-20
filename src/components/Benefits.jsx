@@ -4,7 +4,7 @@ import { benefits } from "../data/benefits";
 export default function Benefits() {
   return (
     <section
-      id="how-it-works"
+      id="beneficios"
       className="mx-auto max-w-(--spacing-container-max) px-margin-mobile py-16 md:px-margin-desktop"
     >
       <div className="mb-12 text-center">

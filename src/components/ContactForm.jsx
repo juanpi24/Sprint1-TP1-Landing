@@ -18,7 +18,7 @@ function handleSubmitClick(event) {
 export default function ContactForm() {
   return (
     <section
-      id="contact"
+      id="contacto"
       className="mx-auto max-w-(--spacing-container-max) px-margin-mobile py-24 md:px-margin-desktop"
     >
       <div className="rounded-xl border border-surface-variant bg-surface-container-low p-8 md:p-12 dark:border-white/10 dark:bg-dark-surface-container-low">

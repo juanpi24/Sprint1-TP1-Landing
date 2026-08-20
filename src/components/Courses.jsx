@@ -4,7 +4,7 @@ import { courses } from "../data/courses";
 export default function Courses() {
   return (
     <section
-      id="curriculum"
+      id="cursos"
       className="mx-auto max-w-(--spacing-container-max) px-margin-mobile py-24 md:px-margin-desktop"
     >
       <div className="mb-12">
