@@ -2,16 +2,16 @@
 
 import { FOOTER_LINKS } from "../data/footerLinks";
 
-export default function Footer() {
+export default function Footer({ brandName }) {
   return (
     <footer className="w-full bg-inverse-surface py-16 text-primary-fixed dark:bg-black">
       <div className="mx-auto grid max-w-(--spacing-container-max) grid-cols-1 gap-gutter px-margin-mobile md:grid-cols-2 md:px-margin-desktop">
         <div>
           <p className="mb-4 text-2xl font-bold text-primary-fixed">
-            RoboKids
+            {brandName}
           </p>
           <p className="max-w-sm text-sm text-surface-variant/80">
-            © 2026 RoboKids Academy. Hecho con React por Juan Pablo Millicay
+            © 2026 {brandName} Academy. Hecho con React por Juan Pablo Millicay
           </p>
         </div>
 

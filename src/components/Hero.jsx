@@ -7,7 +7,7 @@ function handleEnrollClick(event) {
   document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
 }
 
-export default function Hero() {
+export default function Hero({ title, subtitle }) {
   return (
     <section className="relative mx-auto max-w-(--spacing-container-max) overflow-hidden px-margin-mobile py-16 md:px-margin-desktop md:py-32">
       <div className="grid items-center gap-gutter md:grid-cols-2">
@@ -21,7 +21,7 @@ export default function Hero() {
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary-fixed/20 px-3 py-1 dark:bg-dark-primary/20">
             <span aria-hidden="true">🚀</span>
             <span className="font-mono-label text-xs font-semibold uppercase tracking-widest text-primary dark:text-dark-primary">
-              Plataforma 100% online
+               {title}
             </span>
           </span>
 
@@ -33,9 +33,7 @@ export default function Hero() {
           </h1>
 
           <p className="max-w-lg text-lg text-on-surface-variant dark:text-dark-on-surface-variant">
-            Aprendé robótica y programación desde casa. Conectamos la curiosidad
-            natural con las herramientas tecnológicas del futuro, en un entorno
-            seguro y divertido.
+            {subtitle}
           </p>
 
           <div className="mt-4 flex flex-wrap gap-4">

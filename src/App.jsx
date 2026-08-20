@@ -7,16 +7,25 @@ import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
 export default function App() {
+  const brandName = "RoboKids";
+  
+  const handleCourseClick = (course) => {
+    alert(`Elegiste consultar por el curso: ${course.title}. ¡Siguiente cohorte inicia pronto!`);
+  };
+
   return (
     <>
       <Navbar />
       <main className="pb-16 pt-20">
-        <Hero />
+        <Hero 
+          title="Plataforma 100% online"
+          subtitle="Aprendé robótica y programación desde casa. Conectamos la curiosidad natural con las herramientas tecnológicas del futuro, en un entorno seguro y divertido.."
+        />
         <Benefits />
-        <Courses />
+        <Courses  onCourseClick={handleCourseClick}/>
         <ContactForm />
       </main>
-      <Footer />
+      <Footer brandName={brandName}/>
     </>
   );
 }
