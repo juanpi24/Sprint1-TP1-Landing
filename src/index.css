@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* Tailwind base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables de diseño basadas en DESIGN.md */
+:root {
+  --color-primary: #0056c6;
+  --color-secondary: #406900;
+  --color-background: #f9f9fc;
+  --color-surface: #ffffff;
+  --color-onSurface: #1a1c1e;
+  --color-inverseSurface: #2f3133;
+  --color-inverseOnSurface: #f0f0f3;
+  --color-error: #ba1a1a;
+
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Dark mode */
+.dark {
+  --color-background: #2f3133;
+  --color-onSurface: #f0f0f3;
+}
+
+/* Aplicación global */
+html, body {
+  @apply font-sans;
+  background-color: var(--color-background);
+  color: var(--color-onSurface);
+}
+
+/* Ejemplo de clases personalizadas */
+.btn-primary {
+  @apply px-4 py-2 rounded-md font-bold;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 rounded-md font-bold border;
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.card {
+  @apply p-6 rounded-xl shadow;
+  background-color: var(--color-surface);
+  color: var(--color-onSurface);
+}
