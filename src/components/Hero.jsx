@@ -1,10 +1,10 @@
 // src/components/Hero.jsx
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 
 // Handler nombrado: hace scroll suave hacia el formulario de contacto.
 function handleEnrollClick(event) {
   event.preventDefault();
-  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
 }
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
           className="z-10 flex flex-col gap-6"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary-fixed/20 px-3 py-1 dark:bg-dark-primary/20">
             <span aria-hidden="true">🚀</span>
@@ -33,9 +33,9 @@ export default function Hero() {
           </h1>
 
           <p className="max-w-lg text-lg text-on-surface-variant dark:text-dark-on-surface-variant">
-            Aprendé robótica y programación desde casa. Conectamos la
-            curiosidad natural con las herramientas tecnológicas del futuro,
-            en un entorno seguro y divertido.
+            Aprendé robótica y programación desde casa. Conectamos la curiosidad
+            natural con las herramientas tecnológicas del futuro, en un entorno
+            seguro y divertido.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-4">
@@ -50,12 +50,12 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Imagen — animada con un pequeño delay respecto al texto */}
+        {/* Imagen — animada con un pequeño delay respecto al texto */} 
         <motion.div
-          className="glass-panel relative h-[320px] overflow-hidden rounded-xl border border-surface-variant p-4 md:h-[520px] dark:border-white/10"
+          className="glass-panel relative h-80 overflow-hidden rounded-xl border border-surface-variant p-4 md:h-[32.5rem] dark:border-white/10"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+          transition={{ duration: 0.7, delay: 0.15, ease: 'easeOut' }}
         >
           <img
             src="/hero-robotics.jpg"
