@@ -1,11 +1,6 @@
 // src/components/Footer.jsx
 
-const FOOTER_LINKS = [
-  { id: "privacy", label: "Privacy Policy", href: "#" },
-  { id: "terms", label: "Terms of Service", href: "#" },
-  { id: "parent-portal", label: "Parent Portal", href: "#" },
-  { id: "careers", label: "Careers", href: "#" },
-];
+import { FOOTER_LINKS } from "../data/footerLinks";
 
 export default function Footer() {
   return (
@@ -16,7 +11,7 @@ export default function Footer() {
             RoboKids
           </p>
           <p className="max-w-sm text-sm text-surface-variant/80">
-            © 2024 RoboKids Academy. Engineering the future.
+            © 2026 RoboKids Academy. Hecho con React por Juan Pablo Millicay
           </p>
         </div>
 
