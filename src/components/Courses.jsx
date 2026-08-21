@@ -1,5 +1,5 @@
 // src/components/Courses.jsx
-import { courses } from "../data/courses";
+import { courses } from '../data/courses';
 
 export default function Courses({ onCourseClick }) {
   return (
@@ -47,7 +47,7 @@ export default function Courses({ onCourseClick }) {
             <a
               href="#enroll"
               className="flex items-center gap-1 text-sm font-bold text-primary transition-all group-hover:gap-2 dark:text-dark-primary"
-               onClick={() => onCourseClick(course)}
+              onClick={() => onCourseClick(course)}
             >
               Ver plan de estudios <span aria-hidden="true">→</span>
             </a>

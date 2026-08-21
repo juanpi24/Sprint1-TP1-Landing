@@ -21,7 +21,7 @@ export default function Hero({ title, subtitle }) {
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary-fixed/20 px-3 py-1 dark:bg-dark-primary/20">
             <span aria-hidden="true">🚀</span>
             <span className="font-mono-label text-xs font-semibold uppercase tracking-widest text-primary dark:text-dark-primary">
-               {title}
+              {title}
             </span>
           </span>
 
@@ -48,7 +48,7 @@ export default function Hero({ title, subtitle }) {
           </div>
         </motion.div>
 
-        {/* Imagen — animada con un pequeño delay respecto al texto */} 
+        {/* Imagen — animada con un pequeño delay respecto al texto */}
         <motion.div
           className="glass-panel relative h-80 overflow-hidden rounded-xl border border-surface-variant p-4 md:h-[32.5rem] dark:border-white/10"
           initial={{ opacity: 0, scale: 0.96 }}

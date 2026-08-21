@@ -33,7 +33,8 @@
   --color-outline: #727787;
   --color-outline-variant: #c2c6d8;
 
-  --color-primary: #0056c6;  /* color verde: #9ffb00*/
+  --color-primary: #0056c6;
+  /* color verde: #9ffb00*/
   --color-on-primary: #ffffff;
   --color-primary-container: #006df8;
   --color-on-primary-container: #fefcff;

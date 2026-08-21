@@ -5,12 +5,12 @@
 // (En un TP posterior esto se conecta a un backend real.)
 function handleSubmitClick(event) {
   event.preventDefault();
-  const form = event.currentTarget.closest("form");
-  const name = form?.elements?.namedItem("name")?.value?.trim();
+  const form = event.currentTarget.closest('form');
+  const name = form?.elements?.namedItem('name')?.value?.trim();
   window.alert(
     name
       ? `¡Gracias, ${name}! Te vamos a escribir a la brevedad.`
-      : "¡Gracias! Te vamos a escribir a la brevedad."
+      : '¡Gracias! Te vamos a escribir a la brevedad.',
   );
   form?.reset();
 }

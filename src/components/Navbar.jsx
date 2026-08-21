@@ -61,7 +61,6 @@ export default function Navbar() {
                     {link.label}
                   </a>
                 ))}
-               
               </div>
             </nav>
           </details>

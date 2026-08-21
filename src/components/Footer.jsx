@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 
-import { FOOTER_LINKS } from "../data/footerLinks";
+import { FOOTER_LINKS } from '../data/footerLinks';
 
 export default function Footer({ brandName }) {
   return (

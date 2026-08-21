@@ -1,5 +1,5 @@
 // src/components/Benefits.jsx
-import { benefits } from "../data/benefits";
+import { benefits } from '../data/benefits';
 
 export default function Benefits() {
   return (
@@ -23,15 +23,17 @@ export default function Benefits() {
             key={benefit.id}
             className={`group flex flex-col overflow-hidden rounded-xl border border-surface-variant bg-surface-container-low transition-colors hover:border-primary dark:border-white/10 dark:bg-dark-surface-container-low ${
               // Eliminamos 'justify-end' y el padding general para controlar el espacio internamente
-              benefit.large ? "md:col-span-2 md:row-span-2" : ""
+              benefit.large ? 'md:col-span-2 md:row-span-2' : ''
             }`}
           >
             {/* 1. CONTENEDOR DE IMAGEN (Espacio fijo superior) */}
             {benefit.image && (
-              <div className={`relative overflow-hidden w-full ${
-                // Las tarjetas grandes necesitan más espacio de imagen para no quedar desproporcionadas
-                benefit.large ? "h-48 md:h-64" : "h-40"
-              }`}>
+              <div
+                className={`relative overflow-hidden w-full ${
+                  // Las tarjetas grandes necesitan más espacio de imagen para no quedar desproporcionadas
+                  benefit.large ? 'h-48 md:h-64' : 'h-40'
+                }`}
+              >
                 <img
                   src={benefit.image}
                   alt={benefit.title}
